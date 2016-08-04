@@ -1,6 +1,9 @@
-export function createReducer(initialState, reducerMap) {
-  return (state = initialState, action) => {
-    let reducer = reducerMap[action.type];
+module.exports = function createReducer(initialState, reducerMap) {
+  return function () {
+    var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
+    var action = arguments[1];
+
+    var reducer = reducerMap[action.type];
 
     // If action type does not match, return previous state.
     if (!reducer) return state;
@@ -11,7 +14,7 @@ export function createReducer(initialState, reducerMap) {
     //
     // Otherwise, you can specify separate reducers for next() and throw(). This
     // API is inspired by the ES6 generator interface.
-    const handlerKey = action.error === true ? 'throw' : 'next';
+    var handlerKey = action.error === true ? 'throw' : 'next';
 
     // If function is passed instead of map, use as reducer.
     if (isFunction(reducer)) {
@@ -23,4 +26,4 @@ export function createReducer(initialState, reducerMap) {
 
     return isFunction(reducer) ? reducer(state, action.payload) : state;
   };
-}
+};
