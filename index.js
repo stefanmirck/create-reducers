@@ -1,4 +1,9 @@
-module.exports = function createReducer(initialState, reducerMap) {
+function isFunction(fn) {
+  if (!fn) return false;
+  return typeof fn === 'function';
+}
+
+function createReducer(initialState, reducerMap) {
   return function () {
     var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
     var action = arguments[1];
@@ -26,4 +31,6 @@ module.exports = function createReducer(initialState, reducerMap) {
 
     return isFunction(reducer) ? reducer(state, action.payload) : state;
   };
-};
+}
+
+module.exports = createReducer;
