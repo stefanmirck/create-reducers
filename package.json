@@ -10,6 +10,10 @@
     "utils",
     "redux"
   ],
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanmirck/create-reducers.git"
+  },
   "author": "Stefan Mirck <stefanmirck@gmail.com>",
   "license": "ISC"
 }
