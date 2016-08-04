@@ -11,7 +11,7 @@ export default createReducer(initialState, {
   SOME_ACTION: (state, payload) => state,
   ANOTHER_ACTION: {
     next: (state, payload) => state,
-    throw: (state, payload) => state, // Get's hit when `{ error: true }` is specified in the payload
+    throw: (state, payload) => state, // Get's hit when `{ error: true }` is specified in the action
   },
 });
 
