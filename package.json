@@ -1,6 +1,6 @@
 {
-  "name": "create-reducer",
-  "version": "0.1.0",
+  "name": "create-reducer-map",
+  "version": "0.1.1",
   "description": "A tiny utility to create reducer maps for Redux.",
   "main": "index.js",
   "scripts": {
