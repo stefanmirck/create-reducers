@@ -1,6 +1,6 @@
 {
   "name": "create-reducer-map",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny utility to create reducer maps for Redux.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "redux",
     "fsa"
   ],
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/stefanmirck/create-reducers.git"
   },
