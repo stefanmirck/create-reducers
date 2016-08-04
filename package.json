@@ -1,0 +1,15 @@
+{
+  "name": "create-reducer",
+  "version": "0.1.0",
+  "description": "A small utility to create reducer maps for Redux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utils",
+    "redux"
+  ],
+  "author": "Stefan Mirck <stefanmirck@gmail.com>",
+  "license": "MIT"
+}
