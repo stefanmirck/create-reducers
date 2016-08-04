@@ -8,7 +8,8 @@
   },
   "keywords": [
     "utils",
-    "redux"
+    "redux",
+    "FSA"
   ],
   "author": "Stefan Mirck <stefanmirck@gmail.com>",
   "license": "ISC"
