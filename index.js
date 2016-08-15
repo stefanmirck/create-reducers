@@ -1,5 +1,4 @@
 function isFunction(fn) {
-  if (!fn) return false;
   return typeof fn === 'function';
 }
 
