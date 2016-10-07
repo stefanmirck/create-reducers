@@ -21,9 +21,7 @@ function createReducer(initialState, reducerMap) {
     var handlerKey = action.error === true ? 'throw' : 'next';
 
     // If function is passed instead of map, use as reducer.
-    if (isFunction(reducer)) {
-      reducer.next = reducer.throw = reducer;
-    }
+    if (isFunction(reducer)) reducer.next = reducer.throw = reducer;
 
     // Otherwise, assume an action map was passed.
     reducer = reducer[handlerKey];
