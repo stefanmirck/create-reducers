@@ -26,7 +26,13 @@ function createReducer(initialState, reducerMap) {
     // Otherwise, assume an action map was passed.
     reducer = reducer[handlerKey];
 
-    return isFunction(reducer) ? reducer(state, action.payload) : state;
+    // If the reducer turns out to be something else than a function, return the
+    // current state.
+    if (!isFunction(reducer)) return state;
+
+    // Else return the reducer, optionally with meta data.
+    return action.meta ?
+      reducer(state, action.payload, action.meta) : reducer(state, action.payload);
   };
 }
 
