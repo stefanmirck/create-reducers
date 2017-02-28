@@ -17,12 +17,12 @@ const initialState = {};
 export default createReducer(initialState, {
   [SOME_ACTION]: {
     // Handles a basic FSA action.
-    next: (state, payload) => state,
+    next: (state, payload, meta) => state,
     // Handles an FSA action that represents an error.
-    throw: (state, payload) => state,
+    throw: (state, payload, meta) => state,
   },
   // Handles any FSA action.
-  [ANOTHER_ACTION]: (state, payload) => state
+  [ANOTHER_ACTION]: (state, payload, meta) => state
 });
 
 // Basic FSA action
@@ -30,6 +30,9 @@ export default createReducer(initialState, {
   type: SOME_ACTION,
   payload: {
     text: 'Do something...'
+  }
+  meta: {
+    optional: 'Something else...'
   }
 }
 
